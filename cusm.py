@@ -5,11 +5,13 @@ import time
 import colorsys
 import pip
 
+
 def clr():
-	if os.name == 'nt':
-		os.system('cls')
-	else:
-		os.system('clear')
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
 
 def banner():
     clr()
@@ -28,9 +30,9 @@ def banner():
     """
     print(logo)
 
+
 def requirmnts():
     os.system('pkg install git -y && pkg install python -y && pkg install toilet -y && pkg install figlet -y')
-
 
 
 def load3():
@@ -42,7 +44,7 @@ def load3():
     IRC channel:     #termux on freenode
     Gitter chat:     https://gitter.im/termux/termux
     Mailing list:    termux+subscribe@groups.io
-    
+
     Search packages:   pkg search <query>
     Install a package: pkg install <package>
     Upgrade packages:  pkg upgrade
@@ -53,11 +55,13 @@ def load3():
     os.system(print(Intro))
     print("Exit And Termux And Re-Open\n\tSee Your Old Termux")
 
+
 def LScrees():
     requirmnts()
     clr()
     banner()
-    print("This Tool Is Designed For Termux Only.\n\tUsing In Other Terminal Or Linux May Cause Error.\n\nYou Are About To Customize Your Termux.")
+    print(
+        "This Tool Is Designed For Termux Only.\n\tUsing In Other Terminal Or Linux May Cause Error.\n\nYou Are About To Customize Your Termux.")
     input("\tPress Enter To Continue >->")
     clr()
     banner()
@@ -69,14 +73,15 @@ def LScrees():
             qwe = input("What Do You Want At Startup\n1.Figlet Your Text..\n2.Border Your Figltet Name..\n>>>")
             while True:
                 if qwe == "1":
-                    asd1 = os.system('figlet ' + txt )
+                    asd1 = os.system('figlet ' + txt)
                     print(asd1)
                     zx = input("Do You Want To Continue[y/n]: ")
                     while True:
-                        if zx == "y" or "Y" or "Yes" or "YES" :
+                        if zx == "y" or "Y" or "Yes" or "YES":
                             print("Installing Requirements...")
-                            os.system('cd .. && cd .. && cd usr && cd bin && cat login && cd .. && cd etc && cat > motd ')
-                            os.system(print(asd1))
+                            os.system(
+                                'cd .. && cd .. && cd usr && cd bin && cat login && cd .. && cd etc && cat > motd ')
+                            os.system(print(os.system('figlet ' + txt)))
                             print("Exit And Termux And Re-Open\n\tSee The magic")
                         elif zx == "n" or "N" or "no" or "NO":
                             print("Task Has Been Succesfully Aborted.\n\n\n1.Try Again.\n2.Exit")
@@ -100,9 +105,9 @@ def LScrees():
                     print(asd2)
                     zx = input("Do You Want To Continue[y/n]: ")
                     while True:
-                        if zx == "y" or "Y" or "Yes" or "YES" :
+                        if zx == "y" or "Y" or "Yes" or "YES":
                             print("Installing Requirements...")
-                            os.system(print(asd2))
+                            os.system(print(os.system('toilet -f mono12 -F border ' + txt)))
                             print("Exit And Termux And Re-Open\n\tSee The magic")
                         elif zx == "n" or "N" or "no" or "NO":
                             print("Task Has Been Succesfully Aborted.\n\n\n1.Try Again.\n2.Exit")
@@ -131,6 +136,7 @@ def LScrees():
         else:
             print("Invalid Input Detected")
             exit()
+
 
 LScrees()
 
