@@ -81,7 +81,7 @@ def LScrees():
                             print("Installing Requirements...")
                             os.system(
                                 'cd .. && cd .. && cd usr && cd bin && cat login && cd .. && cd etc && cat > motd ')
-                            os.system(print(os.system('figlet ' + txt)))
+                            os.system(print(os.system('figlet ' + str(txt))))
                             print("Exit And Termux And Re-Open\n\tSee The magic")
                         elif zx == "n" or "N" or "no" or "NO":
                             print("Task Has Been Succesfully Aborted.\n\n\n1.Try Again.\n2.Exit")
@@ -107,7 +107,7 @@ def LScrees():
                     while True:
                         if zx == "y" or "Y" or "Yes" or "YES":
                             print("Installing Requirements...")
-                            os.system(print(os.system('toilet -f mono12 -F border ' + txt)))
+                            os.system(print(os.system('toilet -f mono12 -F border ' + str(txt))))
                             print("Exit And Termux And Re-Open\n\tSee The magic")
                         elif zx == "n" or "N" or "no" or "NO":
                             print("Task Has Been Succesfully Aborted.\n\n\n1.Try Again.\n2.Exit")
