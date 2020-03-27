@@ -60,28 +60,26 @@ def LScrees():
     requirmnts()
     clr()
     banner()
-    print(
-        "This Tool Is Designed For Termux Only.\n\tUsing In Other Terminal Or Linux May Cause Error.\n\nYou Are About To Customize Your Termux.")
+    print("This Tool Is Designed For Termux Only.\n\tUsing In Other Terminal Or Linux May Cause Error.\n\nYou Are About To Customize Your Termux.")
     input("\tPress Enter To Continue >->")
     clr()
     banner()
     op = input("What You Want To Do..\n1.Customize\n2.Restore\n>>>")
     while True:
         if op == "1":
-            txt = input("Enter Your Text To Be Displayed on Login Screen\n>>>")
-            print(txt)
             qwe = input("What Do You Want At Startup\n1.Figlet Your Text..\n2.Border Your Figltet Name..\n>>>")
             while True:
                 if qwe == "1":
+                    txt = input("Enter Your Text To Be Displayed on Login Screen\n>>>")
+                    print(txt)
                     asd1 = os.system('figlet ' + txt)
                     print(asd1)
                     zx = input("Do You Want To Continue[y/n]: ")
                     while True:
                         if zx == "y" or "Y" or "Yes" or "YES":
                             print("Installing Requirements...")
-                            os.system(
-                                'cd .. && cd .. && cd usr && cd bin && cat login && cd .. && cd etc && cat > motd ')
-                            os.system(print(os.system('figlet ' + str(txt))))
+                            os.system('cd .. && cd .. && cd usr && cd bin && cat login && cd .. && cd etc && cat > motd ')
+                            os.system(print(os.system('figlet ' + txt))) or os.system(print(asd1))
                             print("Exit And Termux And Re-Open\n\tSee The magic")
                         elif zx == "n" or "N" or "no" or "NO":
                             print("Task Has Been Succesfully Aborted.\n\n\n1.Try Again.\n2.Exit")
@@ -107,7 +105,7 @@ def LScrees():
                     while True:
                         if zx == "y" or "Y" or "Yes" or "YES":
                             print("Installing Requirements...")
-                            os.system(print(os.system('toilet -f mono12 -F border ' + str(txt))))
+                            os.system(print(os.system('toilet -f mono12 -F border ' + txt)))
                             print("Exit And Termux And Re-Open\n\tSee The magic")
                         elif zx == "n" or "N" or "no" or "NO":
                             print("Task Has Been Succesfully Aborted.\n\n\n1.Try Again.\n2.Exit")
